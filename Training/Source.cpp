@@ -70,48 +70,7 @@ struct QInt {
 	}
 
 
-	/*QInt operator>>(const unsigned int & amount)
-	{
-		QInt result;
-		unsigned int pos = 3 - (amount / 32);
-		unsigned int right = amount % 32;
-		unsigned int left = 32 - right;
-		unsigned int count = 3;
-		if (data[0] >> 31 & 1 == 1)
-		{
-			int temp;
-			result = ~result;
-			if (amount >= 128) return result;
-			result.data[count] = result.data[count] & (data[pos] >> right);
-			pos--;
-			temp = result.data[count];
-			int i ;
-			for ( i = pos; i >= 0; i--)
-			{
-				result.data[count] = result.data[count] & (data[i] << left);
-				result.data[count] = result.data[count] | temp;
-				count--;
-				result.data[count] = result.data[count] & (data[i] >> right);
-				temp = result.data[count];
-			}
-		}
-
-
-
-		else
-		{
-			if (amount >= 128) return result;
-			result.data[count] = result.data[count] | (data[pos] >> right);
-			pos--;
-			for (int i = pos; i >= 0; i--)
-			{
-				result.data[count] = result.data[count] | (data[i] << left);
-				count--;
-				result.data[count] = result.data[count] | (data[i] >> right);
-			}
-		}
-		return result;
-	}*/
+	
 
 
 	QInt operator>>(const unsigned int & amount)
@@ -406,27 +365,9 @@ string QIntToString(const QInt& a)
 	}
 }
 
-
 int main()
 {
-	//int x = 500;
-	//char a[4] = { 0 };
-	//char temp;
-	//int i = 0;
-	//int pos = 3;
-	//while (x > 0)
-	//{
 
-	//	if (i == 8) {
-	//		i = 0;
-	//		pos--;
-	//	}
-	//	temp = (x < 2) ? x : x % 2;
-	//	if (temp == 1)
-	//		a[pos] = a[pos] | (temp << i);
-	//	i++;
-	//	x = x / 2;
-	//}
 
 
 	QInt q;
@@ -457,4 +398,4 @@ int main()
 	return 0;
 }
 
-// vd test github
+
