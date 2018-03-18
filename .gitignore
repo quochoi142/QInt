@@ -297,3 +297,8 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+# Solution
+*.sln
+Training/*.vcxproj
+Training/*.vcxproj.filters
